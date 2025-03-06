@@ -1,0 +1,106 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Avatar } from "@/components/ui/avatar";
+import { Github, Linkedin } from "lucide-react";
+
+const Portfolio = () => {
+  return (
+    <div className="bg-blue-50 min-h-screen p-8">
+      <div className="max-w-4xl mx-auto">
+        <header className="flex flex-col items-center mb-8">
+          <Avatar className="w-24 h-24 mb-4" src="/profile.jpg" alt="Sachin Koti" />
+          <h1 className="text-3xl font-bold text-blue-700">Sachin Koti</h1>
+          <p className="text-gray-600">Software Engineer | MSCS @ USC</p>
+          <div className="flex space-x-4 mt-2">
+            <Button asChild variant="outline">
+              <a href="https://github.com/sachin-koti" target="_blank" rel="noopener noreferrer">
+                <Github className="w-5 h-5" />
+              </a>
+            </Button>
+            <Button asChild variant="outline">
+              <a href="https://linkedin.com/in/sachin-koti" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </Button>
+          </div>
+        </header>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-blue-700 mb-2">About Me</h2>
+          <Card>
+            <CardContent className="p-4">
+              <p>
+                Passionate software engineer with over five years of experience in software
+                development, data science, and cloud technologies. Skilled in building scalable
+                applications with Angular, Django, and AWS.
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-blue-700 mb-2">Skills</h2>
+          <Card>
+            <CardContent className="p-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <h3 className="font-semibold text-blue-600">Frontend</h3>
+                  <ul className="list-disc list-inside text-gray-700">
+                    <li>Angular</li>
+                    <li>React</li>
+                    <li>JavaScript, TypeScript</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-blue-600">Backend</h3>
+                  <ul className="list-disc list-inside text-gray-700">
+                    <li>Node.js</li>
+                    <li>Django</li>
+                    <li>Express.js</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-blue-600">Cloud</h3>
+                  <ul className="list-disc list-inside text-gray-700">
+                    <li>AWS (SageMaker, EC2, RDS)</li>
+                    <li>Google Cloud</li>
+                    <li>Docker, CI/CD</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-blue-700 mb-2">Education</h2>
+          <Card>
+            <CardContent className="p-4">
+              <p className="font-semibold">University of Southern California</p>
+              <p>Master of Science, Computer Science (2023 - 2024)</p>
+              <p className="font-semibold mt-2">KLE Technological University</p>
+              <p>Bachelor of Engineering, Computer Science (2014 - 2018)</p>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-blue-700 mb-2">Experience</h2>
+          <Card>
+            <CardContent className="p-4">
+              <p className="font-semibold">ScriptChain Health - Software Engineer</p>
+              <p>Developed a HIPAA-compliant SPA integrating EHR systems and FHIR-based APIs.</p>
+              <p>Enhanced website performance and security, reducing loading times by 500ms.</p>
+              <p className="font-semibold mt-2">Accenture - Associate Software Engineer</p>
+              <p>Worked on Big Data technologies and cloud computing to optimize system resources.</p>
+            </CardContent>
+          </Card>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default Portfolio;
+
