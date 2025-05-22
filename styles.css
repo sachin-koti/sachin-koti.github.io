@@ -156,11 +156,75 @@ ul li {
     transition: color 0.3s ease-out;
 }
 
-p strong {
+p strong { /* General strong styling, not specific to experience cards' company names yet */
     font-weight: 700;
     color: #333;
     transition: color 0.3s ease-out;
 }
+
+/* Experience Section */
+.experience-card {
+    background-color: #fdfdfd; /* Consistent with project cards */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+    margin-bottom: 25px; /* Space between experience cards */
+    transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.experience-card:last-child {
+    margin-bottom: 0; /* No margin for the last card in the section */
+}
+
+.experience-card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+.experience-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem; /* Same as project card titles */
+    color: #007bff; /* Accent color for titles */
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.25em; /* Reduced margin for tighter grouping with date */
+}
+.experience-card h4 .fas { /* Icon styling */
+    margin-right: 10px;
+    color: #007bff; /* Match title color */
+}
+.experience-card h4 strong { /* Company name if still using strong */
+    font-weight: 700; /* Ensure it's bold */
+    color: #333; /* Slightly different color for company name for emphasis */
+}
+
+
+.experience-card .experience-date {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 1em;
+}
+
+.experience-card ul {
+    padding-left: 5px; /* Indent list slightly if desired */
+    margin-bottom: 0; /* Remove default ul bottom margin */
+}
+
+.experience-card ul li {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 0.5em; /* Consistent list item spacing */
+    line-height: 1.6; /* Ensure good line height for readability */
+}
+.experience-card ul li::before { /* Custom bullet points for experience items */
+    content: "•"; /* Or use FontAwesome icon: \f0da for a right arrow, etc. */
+    color: #007bff; /* Accent color for bullets */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
 
 /* Projects Section */
 .project-list {
@@ -195,6 +259,14 @@ p strong {
     margin-top: 0;
     margin-bottom: 0.5em;
     transition: color 0.3s ease-out; /* Added transition */
+    display: flex; /* Align icon and text */
+    align-items: center; /* Vertically center icon with text */
+}
+
+.project-card h4 .fas { /* Styling for icons within project titles */
+    margin-right: 10px; /* Space between icon and title text */
+    color: #007bff; /* Ensure icon matches title color in light mode */
+    font-size: 1em; /* Match title font size or adjust as needed */
 }
 
 .project-card .project-date {
@@ -232,13 +304,13 @@ p strong {
 }
 
 
-.fa, .fas, .fab {
+.fa, .fas, .fab { /* General icon styling, ensure this doesn't override specific icon needs */
     margin-right: 10px;
     transition: color 0.3s ease-out;
 }
 
 @media (max-width: 992px) {
-    .project-card {
+    .project-card { /* Projects stack to full width earlier */
         flex-basis: 100%;
         min-width: auto;
     }
@@ -257,6 +329,7 @@ p strong {
         min-width: 0;
         margin-bottom: 20px;
     }
+    /* Experience cards are already block, will stack naturally */
     h1 {
         font-size: 2rem;
     }
@@ -331,10 +404,9 @@ body.dark-mode {
 }
 
 body.dark-mode .profile,
-body.dark-mode section { /* Apply general dark mode transition for background and shadow */
+body.dark-mode section { 
     background-color: #1e1e1e;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    /* Other transitions like opacity/transform are handled by .section-visible */
 }
 
 body.dark-mode .avatar {
@@ -383,7 +455,6 @@ body.dark-mode .skills div {
 }
 body.dark-mode .skills div:hover {
     box-shadow: 0 6px 18px rgba(255,255,255,0.07);
-    transform: translateY(-4px); /* transform is already handled by base .skills div:hover */
 }
 
 body.dark-mode .skills h3 {
@@ -395,13 +466,41 @@ body.dark-mode .skills h3 .fa {
     color: #e0e0e0; 
 }
 
-body.dark-mode ul li {
+body.dark-mode ul li { /* General ul li in dark mode */
     color: #c0c0c0;
 }
 
-body.dark-mode p strong {
+body.dark-mode p strong { /* General strong in dark mode */
     color: #03dac6; 
 }
+
+/* Experience cards dark mode */
+body.dark-mode .experience-card {
+    background-color: #2c2c2c; /* Consistent with skill/project cards */
+    box-shadow: 0 2px 5px rgba(255,255,255,0.04);
+}
+body.dark-mode .experience-card:hover {
+    box-shadow: 0 6px 18px rgba(255,255,255,0.07);
+}
+body.dark-mode .experience-card h4 {
+    color: #bb86fc; /* Primary dark accent for titles */
+}
+body.dark-mode .experience-card h4 .fas {
+    color: #bb86fc; /* Match title color */
+}
+body.dark-mode .experience-card h4 strong { /* Company name in dark mode */
+    color: #e0e0e0; /* Brighter for emphasis */
+}
+body.dark-mode .experience-card .experience-date {
+    color: #888; /* Muted date */
+}
+body.dark-mode .experience-card ul li {
+    color: #b0b0b0; /* Text for list items */
+}
+body.dark-mode .experience-card ul li::before {
+    color: #bb86fc; /* Accent color for bullets */
+}
+
 
 body.dark-mode .project-card {
     background-color: #2c2c2c;
@@ -409,11 +508,13 @@ body.dark-mode .project-card {
 }
 body.dark-mode .project-card:hover {
     box-shadow: 0 6px 18px rgba(255,255,255,0.07);
-     /* transform is already handled by base .project-card:hover */
 }
 
 body.dark-mode .project-card h4 {
     color: #bb86fc;
+}
+body.dark-mode .project-card h4 .fas { /* Dark mode icon color for project titles */
+    color: #bb86fc; /* Ensure icon matches title color in dark mode */
 }
 body.dark-mode .project-card .project-date {
     color: #888;
@@ -431,7 +532,7 @@ body.dark-mode .project-link:hover {
 }
 
 
-body.dark-mode section a {
+body.dark-mode section a { /* General section links */
     color: #81d4fa;
 }
 body.dark-mode section a:hover {
@@ -440,8 +541,8 @@ body.dark-mode section a:hover {
 
 body.dark-mode .fa, 
 body.dark-mode .fas, 
-body.dark-mode .fab {
-    color: #c0c0c0;
+body.dark-mode .fab { /* General icon colors in dark mode */
+    color: #c0c0c0; /* Default icon color unless overridden */
 }
 
 
@@ -453,9 +554,10 @@ body.dark-mode input:checked + .slider {
     background-color: #bb86fc; 
 }
 body.dark-mode .slider:before {
-    background-color: #121212; /* Knob matches dark body background */
+    background-color: #121212;
 }
 
+/* Ensure specific section links and text colors are maintained if general rules conflict */
 body.dark-mode section ul li a, body.dark-mode section p a {
     color: #81d4fa;
 }
@@ -463,10 +565,10 @@ body.dark-mode section ul li a:hover, body.dark-mode section p a:hover {
     color: #b3e5fc;
 }
 
-body.dark-mode section ul li {
+body.dark-mode section ul li { /* Catch-all for section list items if not covered by .experience-card */
     color: #c0c0c0;
 }
-body.dark-mode section#about p {
+body.dark-mode section#about p { /* Example for specific section if needed */
     color: #c0c0c0;
 }
 body.dark-mode section#hobbies ul li {
