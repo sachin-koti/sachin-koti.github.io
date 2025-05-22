@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap');
+
 /* Base styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7fc; /* Light mode background */
-    color: #333; /* Light mode text */
-    transition: background-color 0.3s, color 0.3s;
+    background: linear-gradient(180deg, #f4f7fc 0%, #eef2f7 100%); /* Subtle gradient */
+    color: #444;
+    transition: background 0.3s ease-out, color 0.3s ease-out; /* Changed timing function */
+    line-height: 1.65;
+    min-height: 100vh; /* Ensure gradient covers full height */
 }
 .container {
     width: 80%;
@@ -13,15 +17,37 @@ body {
     padding: 20px;
 }
 
+/* Animation helper classes */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(30px); /* Slightly increased translate for more noticeable effect */
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Ensure elements that will be animated have a base transition if they don't have section-visible yet,
+   or if they might be re-hidden and re-shown by some other logic in the future.
+   For this use case, section-visible handles the transition on reveal.
+*/
+.profile, section { /* Apply default transition to sections for when section-visible is added */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out,
+                background-color 0.3s ease-out, box-shadow 0.3s ease-out; /* Include existing transitions */
+}
+
+
 /* Profile section */
 .profile {
     text-align: center;
-    margin-bottom: 40px;
-    background-color: white; /* Light mode background */
-    padding: 20px;
+    margin-bottom: 50px;
+    background-color: white;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* transition already includes background-color, box-shadow from above */
 }
 
 .avatar {
@@ -29,68 +55,95 @@ body {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 h1 {
-    font-size: 2rem;
-    color: #004aad; /* Primary heading color for light mode */
-    transition: color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: #333;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    transition: color 0.3s ease-out;
 }
 
 p {
-    color: #555; /* Paragraph text color for light mode */
-    transition: color 0.3s;
+    margin-bottom: 1em;
+    transition: color 0.3s ease-out;
+}
+
+.profile p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    color: #555;
 }
 
 .links a {
     text-decoration: none;
-    color: #004aad; /* Link color for light mode */
+    color: #007bff;
     margin: 0 15px;
     font-size: 1.2rem;
-    transition: color 0.3s;
+    font-weight: 700;
+    transition: color 0.3s ease-out;
 }
 
 .links a:hover {
-    color: #007acc; /* Link hover color for light mode */
+    color: #0056b3;
 }
 
 /* Section Styling */
-section {
-    margin-bottom: 40px;
-    background-color: white; /* Light mode background for sections */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
+/* section elements already have transitions from .profile, section rule */
 
 h2 {
-    font-size: 1.8rem;
-    color: #004aad; /* Section heading color for light mode */
-    border-bottom: 2px solid #004aad; /* Border color for light mode */
-    padding-bottom: 5px;
-    transition: color 0.3s, border-bottom-color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.9rem;
+    color: #333;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 8px;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    transition: color 0.3s ease-out, border-bottom-color 0.3s ease-out;
 }
 
 .skills {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .skills div {
-    width: 30%;
-    background-color: #f9f9f9; /* Light background for skill blocks in light mode */
-    padding: 15px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    flex-basis: calc(33.333% - 20px);
+    min-width: 280px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+    transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out; /* Refined timing */
+}
+
+.skills div:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
 }
 
 .skills h3 {
-    font-size: 1.5rem;
-    color: #333; /* Skill heading color for light mode */
-    margin-bottom: 10px;
-    transition: color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    transition: color 0.3s ease-out;
+}
+
+.skills h3 .fas, .skills h3 .fa {
+    margin-right: 12px;
+    vertical-align: middle;
 }
 
 ul {
@@ -99,31 +152,119 @@ ul {
 }
 
 ul li {
-    margin: 5px 0;
-    transition: color 0.3s; /* For text color transition */
+    margin-bottom: 0.5em;
+    transition: color 0.3s ease-out;
 }
 
-/* Education & Experience Styling */
 p strong {
-    font-weight: bold;
-    color: #004aad; /* Strong text color for light mode */
-    transition: color 0.3s;
+    font-weight: 700;
+    color: #333;
+    transition: color 0.3s ease-out;
 }
 
-/* Adding icons to skill sections and links */
-.fa, .fas, .fab { /* Consolidated icon classes */
+/* Projects Section */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: flex-start;
+}
+
+.project-card {
+    background-color: #fdfdfd;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+    flex-basis: calc(50% - 12.5px);
+    min-width: calc(50% - 12.5px);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease-out, transform 0.3s ease-out; /* Refined timing */
+}
+
+.project-card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+}
+
+.project-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    color: #007bff;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    transition: color 0.3s ease-out; /* Added transition */
+}
+
+.project-card .project-date {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 1em;
+    transition: color 0.3s ease-out; /* Added transition */
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #555;
+    flex-grow: 1;
+    margin-bottom: 1.5em;
+    /* transition already on general p */
+}
+
+.project-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease-out, transform 0.2s ease-out, color 0.3s ease-out; /* Refined, added color */
+    margin-top: auto;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+.fa, .fas, .fab {
     margin-right: 10px;
-    transition: color 0.3s;
+    transition: color 0.3s ease-out;
 }
 
-/* Responsive Design */
+@media (max-width: 992px) {
+    .project-card {
+        flex-basis: 100%;
+        min-width: auto;
+    }
+}
+
 @media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
     .skills {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
     }
     .skills div {
-        width: 100%;
+        width: auto;
+        min-width: 0;
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    .profile p {
+        font-size: 1em;
     }
 }
 
@@ -146,29 +287,29 @@ p strong {
 }
 
 .slider {
-    background-color: #ccc; /* Slider background for light mode */
+    background-color: #ccc;
     bottom: 0;
     cursor: pointer;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
-    transition: .4s;
+    transition: background-color .4s ease-out; /* Refined timing */
 }
 
 .slider:before {
-    background-color: #fff; /* Slider knob for light mode */
+    background-color: #fff;
     bottom: 4px;
     content: "";
     height: 26px;
     left: 4px;
     position: absolute;
-    transition: .4s;
+    transition: transform .4s ease-out, background-color .4s ease-out; /* Refined timing, added background-color for dark mode knob */
     width: 26px;
 }
 
 input:checked + .slider {
-    background-color: #004aad; /* Slider active background for light mode */
+    background-color: #007bff;
 }
 
 input:checked + .slider:before {
@@ -185,128 +326,149 @@ input:checked + .slider:before {
 
 /* Dark mode styles */
 body.dark-mode {
-    background-color: #121212; /* Darker, more common dark mode background */
-    color: #e0e0e0; /* Light text for readability */
+    background: linear-gradient(180deg, #121212 0%, #1a1a21 100%);
+    color: #c0c0c0;
 }
 
-body.dark-mode .container {
-    /* No specific changes needed for container, inherits body styles */
+body.dark-mode .profile,
+body.dark-mode section { /* Apply general dark mode transition for background and shadow */
+    background-color: #1e1e1e;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    /* Other transitions like opacity/transform are handled by .section-visible */
 }
 
-body.dark-mode .profile {
-    background-color: #1e1e1e; /* Slightly lighter than body for depth */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark mode */
+body.dark-mode .avatar {
+    border-color: #1e1e1e;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.07);
 }
 
 body.dark-mode h1 {
-    color: #bb86fc; /* Vibrant color for main heading in dark mode (Material Design inspired) */
+    color: #bb86fc; 
 }
 
-body.dark-mode p { /* General paragraph text */
-    color: #b0b0b0; /* Softer white for less strain */
+body.dark-mode p {
+    color: #c0c0c0;
 }
 
-body.dark-mode .profile p { /* Profile specific paragraph text */
+body.dark-mode .profile p {
     color: #b0b0b0;
 }
 
 
 body.dark-mode .links a {
-    color: #bb86fc; /* Consistent with h1 for primary actions/links */
+    color: #bb86fc; 
 }
 
 body.dark-mode .links a:hover {
-    color: #d8b9ff; /* Lighter shade on hover */
+    color: #d8b9ff; 
 }
 
-/* Styling for icons within .links a */
 body.dark-mode .links a .fab,
 body.dark-mode .links a .fas {
-    color: #bb86fc; /* Match link color */
+    color: #bb86fc; 
 }
 body.dark-mode .links a:hover .fab,
 body.dark-mode .links a:hover .fas {
-    color: #d8b9ff; /* Match link hover color */
-}
-
-
-body.dark-mode section {
-    background-color: #1e1e1e; /* Consistent section background */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Consistent shadow */
+    color: #d8b9ff; 
 }
 
 body.dark-mode h2 {
-    color: #03dac6; /* Secondary accent color (Material Design inspired) */
-    border-bottom-color: #03dac6; /* Match heading color */
+    color: #03dac6; 
+    border-bottom-color: #03dac6; 
 }
 
 body.dark-mode .skills div {
-    background-color: #2c2c2c; /* Darker background for skill blocks */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for skill blocks */
+    background-color: #2c2c2c; 
+    box-shadow: 0 2px 5px rgba(255,255,255,0.04);
+}
+body.dark-mode .skills div:hover {
+    box-shadow: 0 6px 18px rgba(255,255,255,0.07);
+    transform: translateY(-4px); /* transform is already handled by base .skills div:hover */
 }
 
 body.dark-mode .skills h3 {
-    color: #e0e0e0; /* Clear white for skill subheadings */
+    color: #e0e0e0; 
 }
 
-/* Icons in skill headings */
 body.dark-mode .skills h3 .fas,
-body.dark-mode .skills h3 .fa { /* Added .fa for completeness */
-    color: #e0e0e0; /* Match subheading text color */
+body.dark-mode .skills h3 .fa { 
+    color: #e0e0e0; 
 }
 
 body.dark-mode ul li {
-    color: #b0b0b0; /* Consistent list item color */
+    color: #c0c0c0;
 }
 
-/* Specifically for Education & Experience text, and other strong emphasis */
 body.dark-mode p strong {
-    color: #03dac6; /* Use secondary accent for emphasis */
+    color: #03dac6; 
 }
 
-/* General link styling within sections for dark mode (e.g., project links, hobby links) */
+body.dark-mode .project-card {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.04);
+}
+body.dark-mode .project-card:hover {
+    box-shadow: 0 6px 18px rgba(255,255,255,0.07);
+     /* transform is already handled by base .project-card:hover */
+}
+
+body.dark-mode .project-card h4 {
+    color: #bb86fc;
+}
+body.dark-mode .project-card .project-date {
+    color: #888;
+}
+body.dark-mode .project-card p {
+    color: #b0b0b0;
+}
+body.dark-mode .project-link {
+    background-color: #bb86fc;
+    color: #121212;
+}
+body.dark-mode .project-link:hover {
+    background-color: #d8b9ff;
+    color: #121212;
+}
+
+
 body.dark-mode section a {
-    color: #81d4fa; /* A light, friendly blue for links */
+    color: #81d4fa;
 }
 body.dark-mode section a:hover {
-    color: #b3e5fc; /* Lighter on hover */
+    color: #b3e5fc; 
 }
 
-/* General icon color adjustment for dark mode (if not overridden by more specific rules) */
 body.dark-mode .fa, 
 body.dark-mode .fas, 
 body.dark-mode .fab {
-    color: #e0e0e0; /* Default light color for icons */
+    color: #c0c0c0;
 }
 
 
-/* Toggle Switch in Dark Mode */
 body.dark-mode .slider {
-    background-color: #555; /* Darker slider background */
+    background-color: #424242;
 }
 
 body.dark-mode input:checked + .slider {
-    background-color: #bb86fc; /* Use primary accent color when active */
+    background-color: #bb86fc; 
 }
 body.dark-mode .slider:before {
-    background-color: #e0e0e0; /* Knob color */
+    background-color: #121212; /* Knob matches dark body background */
 }
 
-/* Ensure all text in sections (like About me, Hobbies, etc.) is readable */
-body.dark-mode section p, 
-body.dark-mode section ul li {
-    color: #b0b0b0;
-}
-
-/* Final review of heading colors for consistency */
-/* h1 is #bb86fc */
-/* h2 is #03dac6 */
-/* .skills h3 is #e0e0e0 */
-
-/* This ensures that even if a general 'a' style was missed, section links are readable */
 body.dark-mode section ul li a, body.dark-mode section p a {
     color: #81d4fa;
 }
 body.dark-mode section ul li a:hover, body.dark-mode section p a:hover {
     color: #b3e5fc;
+}
+
+body.dark-mode section ul li {
+    color: #c0c0c0;
+}
+body.dark-mode section#about p {
+    color: #c0c0c0;
+}
+body.dark-mode section#hobbies ul li {
+    color: #c0c0c0;
 }
