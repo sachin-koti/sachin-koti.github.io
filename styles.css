@@ -29,13 +29,9 @@ body {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Ensure elements that will be animated have a base transition if they don't have section-visible yet,
-   or if they might be re-hidden and re-shown by some other logic in the future.
-   For this use case, section-visible handles the transition on reveal.
-*/
-.profile, section { /* Apply default transition to sections for when section-visible is added */
+.profile, section {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out,
-                background-color 0.3s ease-out, box-shadow 0.3s ease-out; /* Include existing transitions */
+                background-color 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 
@@ -47,7 +43,6 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    /* transition already includes background-color, box-shadow from above */
 }
 
 .avatar {
@@ -69,6 +64,17 @@ h1 {
     margin-bottom: 0.75em;
     transition: color 0.3s ease-out;
 }
+
+h3 { /* General h3 styling for consistency, like "My Reading Activity" */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem; /* Consistent with .skills h3 */
+    color: #333;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+    transition: color 0.3s ease-out;
+}
+
 
 p {
     margin-bottom: 1em;
@@ -93,9 +99,6 @@ p {
 .links a:hover {
     color: #0056b3;
 }
-
-/* Section Styling */
-/* section elements already have transitions from .profile, section rule */
 
 h2 {
     font-family: 'Montserrat', sans-serif;
@@ -123,7 +126,7 @@ h2 {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.07);
-    transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out; /* Refined timing */
+    transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .skills div:hover {
@@ -131,14 +134,13 @@ h2 {
     transform: translateY(-4px);
 }
 
-.skills h3 {
+.skills h3 { /* Already styled, ensure consistency if needed */
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* Adjusted from 1.5rem to be smaller than section h3 */
     color: #333;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 0.75em;
-    transition: color 0.3s ease-out;
 }
 
 .skills h3 .fas, .skills h3 .fa {
@@ -156,7 +158,7 @@ ul li {
     transition: color 0.3s ease-out;
 }
 
-p strong { /* General strong styling, not specific to experience cards' company names yet */
+p strong {
     font-weight: 700;
     color: #333;
     transition: color 0.3s ease-out;
@@ -164,16 +166,16 @@ p strong { /* General strong styling, not specific to experience cards' company 
 
 /* Experience Section */
 .experience-card {
-    background-color: #fdfdfd; /* Consistent with project cards */
+    background-color: #fdfdfd;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.07);
-    margin-bottom: 25px; /* Space between experience cards */
+    margin-bottom: 25px;
     transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .experience-card:last-child {
-    margin-bottom: 0; /* No margin for the last card in the section */
+    margin-bottom: 0;
 }
 
 .experience-card:hover {
@@ -183,21 +185,20 @@ p strong { /* General strong styling, not specific to experience cards' company 
 
 .experience-card h4 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem; /* Same as project card titles */
-    color: #007bff; /* Accent color for titles */
+    font-size: 1.3rem;
+    color: #007bff;
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 0.25em; /* Reduced margin for tighter grouping with date */
+    margin-bottom: 0.25em;
 }
-.experience-card h4 .fas { /* Icon styling */
+.experience-card h4 .fas {
     margin-right: 10px;
-    color: #007bff; /* Match title color */
+    color: #007bff;
 }
-.experience-card h4 strong { /* Company name if still using strong */
-    font-weight: 700; /* Ensure it's bold */
-    color: #333; /* Slightly different color for company name for emphasis */
+.experience-card h4 strong {
+    font-weight: 700;
+    color: #333;
 }
-
 
 .experience-card .experience-date {
     font-size: 0.9em;
@@ -206,25 +207,24 @@ p strong { /* General strong styling, not specific to experience cards' company 
 }
 
 .experience-card ul {
-    padding-left: 5px; /* Indent list slightly if desired */
-    margin-bottom: 0; /* Remove default ul bottom margin */
+    padding-left: 5px;
+    margin-bottom: 0;
 }
 
 .experience-card ul li {
     font-size: 1em;
     color: #555;
-    margin-bottom: 0.5em; /* Consistent list item spacing */
-    line-height: 1.6; /* Ensure good line height for readability */
+    margin-bottom: 0.5em;
+    line-height: 1.6;
 }
-.experience-card ul li::before { /* Custom bullet points for experience items */
-    content: "•"; /* Or use FontAwesome icon: \f0da for a right arrow, etc. */
-    color: #007bff; /* Accent color for bullets */
+.experience-card ul li::before {
+    content: "•";
+    color: #007bff;
     font-weight: bold;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
-
 
 /* Projects Section */
 .project-list {
@@ -243,7 +243,7 @@ p strong { /* General strong styling, not specific to experience cards' company 
     min-width: calc(50% - 12.5px);
     display: flex;
     flex-direction: column;
-    transition: box-shadow 0.3s ease-out, transform 0.3s ease-out; /* Refined timing */
+    transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .project-card:hover {
@@ -258,22 +258,22 @@ p strong { /* General strong styling, not specific to experience cards' company 
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 0.5em;
-    transition: color 0.3s ease-out; /* Added transition */
-    display: flex; /* Align icon and text */
-    align-items: center; /* Vertically center icon with text */
+    transition: color 0.3s ease-out;
+    display: flex;
+    align-items: center;
 }
 
-.project-card h4 .fas { /* Styling for icons within project titles */
-    margin-right: 10px; /* Space between icon and title text */
-    color: #007bff; /* Ensure icon matches title color in light mode */
-    font-size: 1em; /* Match title font size or adjust as needed */
+.project-card h4 .fas {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 1em;
 }
 
 .project-card .project-date {
     font-size: 0.9em;
     color: #777;
     margin-bottom: 1em;
-    transition: color 0.3s ease-out; /* Added transition */
+    transition: color 0.3s ease-out;
 }
 
 .project-card p {
@@ -281,7 +281,6 @@ p strong { /* General strong styling, not specific to experience cards' company 
     color: #555;
     flex-grow: 1;
     margin-bottom: 1.5em;
-    /* transition already on general p */
 }
 
 .project-link {
@@ -293,7 +292,7 @@ p strong { /* General strong styling, not specific to experience cards' company 
     text-decoration: none;
     font-weight: 600;
     text-align: center;
-    transition: background-color 0.3s ease-out, transform 0.2s ease-out, color 0.3s ease-out; /* Refined, added color */
+    transition: background-color 0.3s ease-out, transform 0.2s ease-out, color 0.3s ease-out;
     margin-top: auto;
 }
 
@@ -303,16 +302,144 @@ p strong { /* General strong styling, not specific to experience cards' company 
     transform: translateY(-2px);
 }
 
+/* Goodreads Widgets Styling */
+.goodreads-widgets-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Space below the widgets container */
+}
 
-.fa, .fas, .fab { /* General icon styling, ensure this doesn't override specific icon needs */
+.goodreads-widgets-container > div[id^="gr_"] { /* Target direct children: #gr_custom_widget_... and #gr_grid_widget_... */
+    flex-basis: calc(50% - 10px);
+    min-width: 300px; /* Ensure they don't get too squished */
+    box-sizing: border-box; /* Important for flex sizing */
+}
+
+/* Styling for Updates Widget Container (#gr_custom_widget_1722031039's inner div) */
+.gr_custom_container_1722031039 {
+    background-color: #fdfdfd !important; /* Override inline */
+    border: 1px solid #e0e0e0 !important; /* Override inline */
+    border-radius: 8px !important; /* Consistent with cards */
+    padding: 20px !important; /* Consistent padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07) !important;
+    color: #444 !important; /* Base text color */
+    width: 100% !important; /* Ensure it takes full width of its flex parent */
+    height: auto !important; /* Allow height to adjust */
+    font-family: 'Lato', Arial, sans-serif !important;
+}
+.gr_custom_container_1722031039 .gr_custom_header_1722031039 a {
+    color: #007bff !important; /* Accent color for title link */
+    font-family: 'Montserrat', sans-serif !important;
+}
+.gr_custom_container_1722031039 .gr_custom_book_title_1722031039 {
+    color: #007bff !important; /* Accent for book titles */
+    font-family: 'Montserrat', sans-serif !important;
+}
+.gr_custom_container_1722031039 .gr_custom_author_1722031039,
+.gr_custom_container_1722031039 .gr_custom_description_1722031039,
+.gr_custom_container_1722031039 .gr_custom_description_1722031039 a,
+.gr_custom_container_1722031039 div[style*="text-align: right"] a { /* Footer link */
+    font-family: 'Lato', Arial, sans-serif !important;
+    color: #555 !important; /* Normal text color */
+}
+.gr_custom_container_1722031039 .gr_custom_description_1722031039 a:hover,
+.gr_custom_container_1722031039 div[style*="text-align: right"] a:hover {
+    color: #0056b3 !important;
+}
+
+
+/* Styling for Grid Widget Container (#gr_grid_widget_1722031070) */
+#gr_grid_widget_1722031070 {
+    background-color: #fdfdfd !important; /* Override inline */
+    border: 1px solid #e0e0e0 !important; /* Override inline */
+    border-radius: 8px !important;
+    padding: 20px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07) !important;
+    width: 100% !important; /* Ensure it takes full width of its flex parent */
+    font-family: 'Lato', Arial, sans-serif !important;
+}
+#gr_grid_widget_1722031070 #gr_grid_header_1722031070 a {
+    color: #007bff !important; /* Accent color for title link */
+    font-family: 'Montserrat', sans-serif !important;
+}
+#gr_grid_widget_1722031070 .gr_grid_book_container {
+    background: none !important; /* Remove any potential background from inline */
+    border: none !important; /* Remove any potential border from inline */
+    /* width and height are controlled by inline styles, keep them for grid structure */
+}
+#gr_grid_widget_1722031070 .gr_grid_book_container img {
+    border: 1px solid #eee !important; /* Light border for book covers */
+    box-sizing: border-box;
+}
+#gr_grid_widget_1722031070 .gr_grid_branding { /* Footer link */
+    color: #555 !important;
+    font-family: 'Lato', Arial, sans-serif !important;
+}
+#gr_grid_widget_1722031070 .gr_grid_branding:hover {
+    color: #0056b3 !important;
+}
+
+
+/* Dark Mode for Goodreads Widgets */
+body.dark-mode .goodreads-widgets-container h3 { /* "My Reading Activity" heading */
+    color: #03dac6; /* Consistent with other h2 in dark mode */
+}
+body.dark-mode .gr_custom_container_1722031039 {
+    background-color: #2c2c2c !important;
+    border-color: #444 !important;
+    color: #c0c0c0 !important;
+}
+body.dark-mode .gr_custom_container_1722031039 .gr_custom_header_1722031039 a,
+body.dark-mode .gr_custom_container_1722031039 .gr_custom_book_title_1722031039 {
+    color: #bb86fc !important; /* Dark mode accent for titles */
+}
+body.dark-mode .gr_custom_container_1722031039 .gr_custom_author_1722031039,
+body.dark-mode .gr_custom_container_1722031039 .gr_custom_description_1722031039,
+body.dark-mode .gr_custom_container_1722031039 .gr_custom_description_1722031039 a,
+body.dark-mode .gr_custom_container_1722031039 div[style*="text-align: right"] a {
+    color: #b0b0b0 !important;
+}
+body.dark-mode .gr_custom_container_1722031039 .gr_custom_description_1722031039 a:hover,
+body.dark-mode .gr_custom_container_1722031039 div[style*="text-align: right"] a:hover {
+    color: #d8b9ff !important;
+}
+body.dark-mode .gr_custom_container_1722031039 .gr_custom_each_item_1722031039 { /* Border between items */
+    border-bottom-color: #444 !important;
+}
+
+
+body.dark-mode #gr_grid_widget_1722031070 {
+    background-color: #2c2c2c !important;
+    border-color: #444 !important;
+}
+body.dark-mode #gr_grid_widget_1722031070 #gr_grid_header_1722031070 a {
+    color: #bb86fc !important; /* Dark mode accent */
+}
+body.dark-mode #gr_grid_widget_1722031070 .gr_grid_book_container img {
+    border-color: #555 !important; /* Darker border for book covers */
+}
+body.dark-mode #gr_grid_widget_1722031070 .gr_grid_branding {
+    color: #b0b0b0 !important;
+}
+body.dark-mode #gr_grid_widget_1722031070 .gr_grid_branding:hover {
+    color: #d8b9ff !important;
+}
+
+
+.fa, .fas, .fab {
     margin-right: 10px;
     transition: color 0.3s ease-out;
 }
 
 @media (max-width: 992px) {
-    .project-card { /* Projects stack to full width earlier */
+    .project-card {
         flex-basis: 100%;
         min-width: auto;
+    }
+    .goodreads-widgets-container > div[id^="gr_"] { /* Stack widgets on medium screens */
+        flex-basis: 100%;
     }
 }
 
@@ -329,7 +456,6 @@ p strong { /* General strong styling, not specific to experience cards' company 
         min-width: 0;
         margin-bottom: 20px;
     }
-    /* Experience cards are already block, will stack naturally */
     h1 {
         font-size: 2rem;
     }
@@ -367,7 +493,7 @@ p strong { /* General strong styling, not specific to experience cards' company 
     position: absolute;
     right: 0;
     top: 0;
-    transition: background-color .4s ease-out; /* Refined timing */
+    transition: background-color .4s ease-out;
 }
 
 .slider:before {
@@ -377,7 +503,7 @@ p strong { /* General strong styling, not specific to experience cards' company 
     height: 26px;
     left: 4px;
     position: absolute;
-    transition: transform .4s ease-out, background-color .4s ease-out; /* Refined timing, added background-color for dark mode knob */
+    transition: transform .4s ease-out, background-color .4s ease-out;
     width: 26px;
 }
 
@@ -417,6 +543,10 @@ body.dark-mode .avatar {
 body.dark-mode h1 {
     color: #bb86fc; 
 }
+body.dark-mode h3 { /* General h3 dark mode */
+    color: #03dac6; /* Match section h2 */
+}
+
 
 body.dark-mode p {
     color: #c0c0c0;
@@ -457,7 +587,7 @@ body.dark-mode .skills div:hover {
     box-shadow: 0 6px 18px rgba(255,255,255,0.07);
 }
 
-body.dark-mode .skills h3 {
+body.dark-mode .skills h3 { /* Skill h3 in dark mode */
     color: #e0e0e0; 
 }
 
@@ -466,39 +596,38 @@ body.dark-mode .skills h3 .fa {
     color: #e0e0e0; 
 }
 
-body.dark-mode ul li { /* General ul li in dark mode */
+body.dark-mode ul li {
     color: #c0c0c0;
 }
 
-body.dark-mode p strong { /* General strong in dark mode */
+body.dark-mode p strong {
     color: #03dac6; 
 }
 
-/* Experience cards dark mode */
 body.dark-mode .experience-card {
-    background-color: #2c2c2c; /* Consistent with skill/project cards */
+    background-color: #2c2c2c;
     box-shadow: 0 2px 5px rgba(255,255,255,0.04);
 }
 body.dark-mode .experience-card:hover {
     box-shadow: 0 6px 18px rgba(255,255,255,0.07);
 }
 body.dark-mode .experience-card h4 {
-    color: #bb86fc; /* Primary dark accent for titles */
+    color: #bb86fc;
 }
 body.dark-mode .experience-card h4 .fas {
-    color: #bb86fc; /* Match title color */
+    color: #bb86fc;
 }
-body.dark-mode .experience-card h4 strong { /* Company name in dark mode */
-    color: #e0e0e0; /* Brighter for emphasis */
+body.dark-mode .experience-card h4 strong {
+    color: #e0e0e0;
 }
 body.dark-mode .experience-card .experience-date {
-    color: #888; /* Muted date */
+    color: #888;
 }
 body.dark-mode .experience-card ul li {
-    color: #b0b0b0; /* Text for list items */
+    color: #b0b0b0;
 }
 body.dark-mode .experience-card ul li::before {
-    color: #bb86fc; /* Accent color for bullets */
+    color: #bb86fc;
 }
 
 
@@ -513,8 +642,8 @@ body.dark-mode .project-card:hover {
 body.dark-mode .project-card h4 {
     color: #bb86fc;
 }
-body.dark-mode .project-card h4 .fas { /* Dark mode icon color for project titles */
-    color: #bb86fc; /* Ensure icon matches title color in dark mode */
+body.dark-mode .project-card h4 .fas {
+    color: #bb86fc;
 }
 body.dark-mode .project-card .project-date {
     color: #888;
@@ -532,7 +661,7 @@ body.dark-mode .project-link:hover {
 }
 
 
-body.dark-mode section a { /* General section links */
+body.dark-mode section a {
     color: #81d4fa;
 }
 body.dark-mode section a:hover {
@@ -541,8 +670,8 @@ body.dark-mode section a:hover {
 
 body.dark-mode .fa, 
 body.dark-mode .fas, 
-body.dark-mode .fab { /* General icon colors in dark mode */
-    color: #c0c0c0; /* Default icon color unless overridden */
+body.dark-mode .fab {
+    color: #c0c0c0;
 }
 
 
@@ -557,7 +686,6 @@ body.dark-mode .slider:before {
     background-color: #121212;
 }
 
-/* Ensure specific section links and text colors are maintained if general rules conflict */
 body.dark-mode section ul li a, body.dark-mode section p a {
     color: #81d4fa;
 }
@@ -565,12 +693,15 @@ body.dark-mode section ul li a:hover, body.dark-mode section p a:hover {
     color: #b3e5fc;
 }
 
-body.dark-mode section ul li { /* Catch-all for section list items if not covered by .experience-card */
+body.dark-mode section ul li {
     color: #c0c0c0;
 }
-body.dark-mode section#about p { /* Example for specific section if needed */
+body.dark-mode section#about p {
     color: #c0c0c0;
 }
-body.dark-mode section#hobbies ul li {
+body.dark-mode section#hobbies ul li { /* Styling for the "Other Hobbies" list */
     color: #c0c0c0;
+}
+body.dark-mode section#hobbies h3 { /* "My Reading Activity" and "Other Hobbies" */
+    color: #03dac6; /* Match section h2 color */
 }
