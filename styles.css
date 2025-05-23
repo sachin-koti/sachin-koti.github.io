@@ -65,9 +65,9 @@ h1 {
     transition: color 0.3s ease-out;
 }
 
-h3 { /* General h3 styling for consistency, like "My Reading Activity" */
+h3 { /* General h3 styling for consistency, like "My Bookshelf" */
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem; /* Consistent with .skills h3 */
+    font-size: 1.5rem; 
     color: #333;
     font-weight: 600;
     margin-top: 1em;
@@ -134,9 +134,9 @@ h2 {
     transform: translateY(-4px);
 }
 
-.skills h3 { /* Already styled, ensure consistency if needed */
+.skills h3 { 
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem; /* Adjusted from 1.5rem to be smaller than section h3 */
+    font-size: 1.3rem; 
     color: #333;
     font-weight: 600;
     margin-top: 0;
@@ -302,128 +302,110 @@ p strong {
     transform: translateY(-2px);
 }
 
-/* Goodreads Widgets Styling */
-.goodreads-widgets-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-    margin-bottom: 20px; /* Space below the widgets container */
+/* Goodreads Custom Widget Styling */
+.goodreads-custom-widget-wrapper {
+    margin-bottom: 30px; /* Increased space below the widget area */
+    margin-top: 10px; /* Space above the widget area */
 }
 
-.goodreads-widgets-container > div[id^="gr_"] { /* Target direct children: #gr_custom_widget_... and #gr_grid_widget_... */
-    flex-basis: calc(50% - 10px);
-    min-width: 300px; /* Ensure they don't get too squished */
-    box-sizing: border-box; /* Important for flex sizing */
-}
-
-/* Styling for Updates Widget Container (#gr_custom_widget_1722031039's inner div) */
-.gr_custom_container_1722031039 {
-    background-color: #fdfdfd !important; /* Override inline */
-    border: 1px solid #e0e0e0 !important; /* Override inline */
-    border-radius: 8px !important; /* Consistent with cards */
+/* Styles for the specific Goodreads widget container */
+.gr_custom_container_1747961904 {
+    width: 100% !important;
+    max-width: 600px !important; /* Allow widget to be a bit wider */
+    margin: 0 auto !important; /* Center the widget */
+    background-color: #fdfdfd !important; /* Match project/experience card background */
+    border: 1px solid #e0e0e0 !important; /* Match card border */
+    border-radius: 8px !important; /* Match card border-radius */
     padding: 20px !important; /* Consistent padding */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.07) !important;
     color: #444 !important; /* Base text color */
-    width: 100% !important; /* Ensure it takes full width of its flex parent */
-    height: auto !important; /* Allow height to adjust */
-    font-family: 'Lato', Arial, sans-serif !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07) !important; /* Match card shadow */
+    font-family: 'Lato', Arial, sans-serif !important; /* Ensure base font */
 }
-.gr_custom_container_1722031039 .gr_custom_header_1722031039 a {
-    color: #007bff !important; /* Accent color for title link */
+
+.gr_custom_container_1747961904 .gr_custom_header_1747961904 a {
     font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    color: #007bff !important; /* Light mode accent */
+    font-size: 1.2em !important; /* Adjusted size */
 }
-.gr_custom_container_1722031039 .gr_custom_book_title_1722031039 {
-    color: #007bff !important; /* Accent for book titles */
-    font-family: 'Montserrat', sans-serif !important;
-}
-.gr_custom_container_1722031039 .gr_custom_author_1722031039,
-.gr_custom_container_1722031039 .gr_custom_description_1722031039,
-.gr_custom_container_1722031039 .gr_custom_description_1722031039 a,
-.gr_custom_container_1722031039 div[style*="text-align: right"] a { /* Footer link */
-    font-family: 'Lato', Arial, sans-serif !important;
-    color: #555 !important; /* Normal text color */
-}
-.gr_custom_container_1722031039 .gr_custom_description_1722031039 a:hover,
-.gr_custom_container_1722031039 div[style*="text-align: right"] a:hover {
-    color: #0056b3 !important;
+.gr_custom_container_1747961904 .gr_custom_header_1747961904 {
+     border-bottom: 2px solid #007bff !important; /* Match portfolio h2 style */
+     padding-bottom: 10px !important;
+     margin-bottom: 15px !important;
 }
 
 
-/* Styling for Grid Widget Container (#gr_grid_widget_1722031070) */
-#gr_grid_widget_1722031070 {
-    background-color: #fdfdfd !important; /* Override inline */
-    border: 1px solid #e0e0e0 !important; /* Override inline */
-    border-radius: 8px !important;
-    padding: 20px !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.07) !important;
-    width: 100% !important; /* Ensure it takes full width of its flex parent */
-    font-family: 'Lato', Arial, sans-serif !important;
-}
-#gr_grid_widget_1722031070 #gr_grid_header_1722031070 a {
-    color: #007bff !important; /* Accent color for title link */
+.gr_custom_container_1747961904 .gr_custom_title_1747961904 a {
     font-family: 'Montserrat', sans-serif !important;
+    color: #007bff !important; /* Light mode accent */
+    font-weight: bold !important;
+    font-size: 1.05em !important;
 }
-#gr_grid_widget_1722031070 .gr_grid_book_container {
-    background: none !important; /* Remove any potential background from inline */
-    border: none !important; /* Remove any potential border from inline */
-    /* width and height are controlled by inline styles, keep them for grid structure */
-}
-#gr_grid_widget_1722031070 .gr_grid_book_container img {
-    border: 1px solid #eee !important; /* Light border for book covers */
-    box-sizing: border-box;
-}
-#gr_grid_widget_1722031070 .gr_grid_branding { /* Footer link */
+
+.gr_custom_container_1747961904 .gr_custom_author_1747961904,
+.gr_custom_container_1747961904 .gr_custom_author_1747961904 a {
+    font-family: 'Lato', Arial, sans-serif !important;
     color: #555 !important;
-    font-family: 'Lato', Arial, sans-serif !important;
+    font-size: 0.9em !important;
 }
-#gr_grid_widget_1722031070 .gr_grid_branding:hover {
+.gr_custom_container_1747961904 .gr_custom_author_1747961904 a:hover {
+    color: #007bff !important;
+}
+
+.gr_custom_container_1747961904 .gr_custom_each_item_1747961904 {
+    border-bottom-color: #e0e0e0 !important; /* Lighter border between items */
+}
+.gr_custom_container_1747961904 .gr_custom_description_1747961904 {
+    color: #444 !important;
+    font-size: 0.85em !important; /* Slightly smaller description */
+}
+
+.gr_custom_container_1747961904 .gr_custom_footer_1747961904 a {
+    color: #007bff !important;
+}
+.gr_custom_container_1747961904 .gr_custom_footer_1747961904 a:hover {
     color: #0056b3 !important;
 }
 
 
-/* Dark Mode for Goodreads Widgets */
-body.dark-mode .goodreads-widgets-container h3 { /* "My Reading Activity" heading */
-    color: #03dac6; /* Consistent with other h2 in dark mode */
-}
-body.dark-mode .gr_custom_container_1722031039 {
-    background-color: #2c2c2c !important;
-    border-color: #444 !important;
-    color: #c0c0c0 !important;
-}
-body.dark-mode .gr_custom_container_1722031039 .gr_custom_header_1722031039 a,
-body.dark-mode .gr_custom_container_1722031039 .gr_custom_book_title_1722031039 {
-    color: #bb86fc !important; /* Dark mode accent for titles */
-}
-body.dark-mode .gr_custom_container_1722031039 .gr_custom_author_1722031039,
-body.dark-mode .gr_custom_container_1722031039 .gr_custom_description_1722031039,
-body.dark-mode .gr_custom_container_1722031039 .gr_custom_description_1722031039 a,
-body.dark-mode .gr_custom_container_1722031039 div[style*="text-align: right"] a {
-    color: #b0b0b0 !important;
-}
-body.dark-mode .gr_custom_container_1722031039 .gr_custom_description_1722031039 a:hover,
-body.dark-mode .gr_custom_container_1722031039 div[style*="text-align: right"] a:hover {
-    color: #d8b9ff !important;
-}
-body.dark-mode .gr_custom_container_1722031039 .gr_custom_each_item_1722031039 { /* Border between items */
-    border-bottom-color: #444 !important;
+/* Dark Mode for Goodreads Custom Widget */
+body.dark-mode .gr_custom_container_1747961904 {
+    background-color: #2c2c2c !important; /* Dark card background */
+    border-color: #444 !important; /* Darker border */
+    color: #c0c0c0 !important; /* Light text */
+    box-shadow: 0 2px 5px rgba(255,255,255,0.04) !important; /* Lighter shadow for dark bg */
 }
 
+body.dark-mode .gr_custom_container_1747961904 .gr_custom_header_1747961904 a {
+    color: #bb86fc !important; /* Dark mode primary accent */
+}
+body.dark-mode .gr_custom_container_1747961904 .gr_custom_header_1747961904 {
+    border-bottom-color: #bb86fc !important;
+}
 
-body.dark-mode #gr_grid_widget_1722031070 {
-    background-color: #2c2c2c !important;
-    border-color: #444 !important;
+body.dark-mode .gr_custom_container_1747961904 .gr_custom_title_1747961904 a {
+    color: #bb86fc !important; /* Dark mode primary accent */
 }
-body.dark-mode #gr_grid_widget_1722031070 #gr_grid_header_1722031070 a {
-    color: #bb86fc !important; /* Dark mode accent */
+
+body.dark-mode .gr_custom_container_1747961904 .gr_custom_author_1747961904,
+body.dark-mode .gr_custom_container_1747961904 .gr_custom_author_1747961904 a {
+    color: #aaa !important; /* Softer text for author in dark mode */
 }
-body.dark-mode #gr_grid_widget_1722031070 .gr_grid_book_container img {
-    border-color: #555 !important; /* Darker border for book covers */
+body.dark-mode .gr_custom_container_1747961904 .gr_custom_author_1747961904 a:hover {
+    color: #bb86fc !important;
 }
-body.dark-mode #gr_grid_widget_1722031070 .gr_grid_branding {
-    color: #b0b0b0 !important;
+
+body.dark-mode .gr_custom_container_1747961904 .gr_custom_each_item_1747961904 {
+    border-bottom-color: #444 !important; /* Darker border between items */
 }
-body.dark-mode #gr_grid_widget_1722031070 .gr_grid_branding:hover {
+body.dark-mode .gr_custom_container_1747961904 .gr_custom_description_1747961904 {
+    color: #b0b0b0 !important; /* Slightly softer text for description */
+}
+
+body.dark-mode .gr_custom_container_1747961904 .gr_custom_footer_1747961904 a {
+    color: #bb86fc !important;
+}
+body.dark-mode .gr_custom_container_1747961904 .gr_custom_footer_1747961904 a:hover {
     color: #d8b9ff !important;
 }
 
@@ -434,12 +416,9 @@ body.dark-mode #gr_grid_widget_1722031070 .gr_grid_branding:hover {
 }
 
 @media (max-width: 992px) {
-    .project-card {
+    .project-card { 
         flex-basis: 100%;
         min-width: auto;
-    }
-    .goodreads-widgets-container > div[id^="gr_"] { /* Stack widgets on medium screens */
-        flex-basis: 100%;
     }
 }
 
@@ -464,6 +443,9 @@ body.dark-mode #gr_grid_widget_1722031070 .gr_grid_branding:hover {
     }
     .profile p {
         font-size: 1em;
+    }
+    .gr_custom_container_1747961904 { /* Ensure widget doesn't get too wide on small screens, stack if needed */
+        max-width: 100% !important; /* Take full width of its parent */
     }
 }
 
@@ -702,6 +684,6 @@ body.dark-mode section#about p {
 body.dark-mode section#hobbies ul li { /* Styling for the "Other Hobbies" list */
     color: #c0c0c0;
 }
-body.dark-mode section#hobbies h3 { /* "My Reading Activity" and "Other Hobbies" */
+body.dark-mode section#hobbies h3 { /* "My Bookshelf" and "Other Hobbies" */
     color: #03dac6; /* Match section h2 color */
 }

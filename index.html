@@ -135,232 +135,129 @@
 
       <section id="hobbies">
           <h2>Hobbies</h2>
-          
-          <div class="goodreads-widgets-container">
-              <h3>My Reading Activity</h3>
-              
-              <!-- Goodreads Updates Widget -->
+          <div class="goodreads-custom-widget-wrapper">
+              <h3>My Bookshelf</h3>
               <style type="text/css" media="screen">
-                .gr_custom_container_1722031039 {
+                .gr_custom_container_1747961904 {
                   /* customize your Goodreads widget container here*/
-                  border: 1px solid #_e0e0e0;
-                  border-radius:10px;
-                  padding: 20px 20px 20px 20px;
-                  background-color: #_ffffff;
-                  color: #_000000;
-                  width: 100%; /* Ensures the widget takes full width of its container */
-                  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-                  margin-bottom: 20px; /* Space between widgets */
-                }
-                .gr_custom_header_1722031039 {
-                  /* customize your Goodreads header here*/
-                  border-bottom: 1px solid #_000000;
-                  margin-bottom: 5px;
-                  padding-bottom: 5px;
-                  text-align: center;
-                  font-size: 120% !important;
-                }
-                .gr_custom_each_item_1722031039 {
-                  /* customize each item here*/
-                  margin-bottom: 10px;
-                  padding-bottom: 10px;
-                  border-bottom: 1px solid #_EEEEEE;
-                  width: 100%; /* Ensures each item takes full width */
+                  border: 1px solid #E0E0E0; /* Light grey border, consistent with general card styling */
+                  border-radius: 8px; /* Rounded corners like other cards */
+                  padding: 20px;
+                  background-color: #fdfdfd; /* Light background, similar to project/experience cards */
+                  color: #444; /* Base text color from portfolio */
+                  font-family: 'Lato', Arial, sans-serif; /* Match portfolio body font */
+                  box-shadow: 0 2px 5px rgba(0,0,0,0.07); /* Consistent shadow */
+                  width: 100%; /* Make it responsive within its container */
                   box-sizing: border-box;
-                  overflow: auto; /* Clear floats */
                 }
-                .gr_custom_last_item_1722031039 {
-                  /* customize the last item here*/
+                .gr_custom_header_1747961904 {
+                  /* customize your Goodreads header here*/
+                  font-family: 'Montserrat', Arial, sans-serif; /* Match portfolio heading font */
+                  color: #007bff; /* Accent color from portfolio */
+                  border-bottom: 2px solid #007bff;
+                  margin-bottom: 15px;
+                  padding-bottom: 10px;
+                  text-align: center;
+                  font-size: 1.3em !important; /* Slightly smaller than section h2, similar to card titles */
+                }
+                .gr_custom_each_item_1747961904 {
+                  /* customize each item here*/
+                  margin-bottom: 15px;
+                  padding-bottom: 15px;
+                  border-bottom: 1px solid #eeeeee;
+                  display: flex; /* Use flexbox for layout */
+                  align-items: flex-start; /* Align items to the top */
+                  width: 100%;
+                  box-sizing: border-box;
+                }
+                .gr_custom_each_item_1747961904:last-of-type {
+                  border-bottom: none; /* No border for the last item */
                   margin-bottom: 0;
                   padding-bottom: 0;
-                  border-bottom: none;
                 }
-                .gr_custom_book_title_1722031039 {
+                .gr_custom_title_1747961904 {
                   /* customize book titles here */
-                  font-family: georgia, serif;
-                  font-size: 110% !important;
-                  color: #_006600 !important;
+                  font-family: 'Montserrat', Arial, sans-serif; /* Match portfolio heading font */
+                  font-size: 1.1em !important;
+                  color: #007bff !important; /* Accent color for titles */
+                  text-decoration: none;
+                  font-weight: bold;
+                  margin-bottom: 5px; /* Space below title */
                 }
-                .gr_custom_author_1722031039 {
-                  /* customize author names here */
-                  font-size: 100% !important;
-                }
-                .gr_custom_description_1722031039 {
-                  /* customize description here */
-                  font-family: times new roman, serif;
-                  margin-left: 60px; /* Space for floated image */
-                }
-                .gr_custom_rating_1722031039 {
-                  /* customize rating stars here */
-                  float: right;
-                }
-                .gr_custom_image_1722031039 {
-                  /* customize book cover image here */
-                  float: left;
-                  margin-right: 10px;
-                  margin-bottom: 10px;
-                  width: 50px; /* Default width, can be adjusted */
-                }
-                .gr_custom_image_1722031039 img {
-                  width: 50px; /* Ensures image inside the container respects the width */
-                  height: auto; /* Maintain aspect ratio */
-                }
-              </style>
-              <div id="gr_custom_widget_1722031039">
-                <div class="gr_custom_container_1722031039">
-                  <h2 class="gr_custom_header_1722031039">
-                  <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/user/show/109963536-sachin-koti">Sachin Koti's Goodreads Updates</a>
-                  </h2>
-                  <div class="gr_custom_each_item_1722031039">
-                    <div class="gr_custom_image_1722031039">
-                      <a rel="nofollow" href="https://www.goodreads.com/book/show/59345272-the-creative-act"><img alt="The Creative Act: A Way of Being" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1660233000l/59345272._SX50_.jpg"/></a>
-                    </div>
-                    <div class="gr_custom_title_1722031039">
-                      <a style="text-decoration: none;" class="gr_custom_book_title_1722031039" rel="nofollow" href="https://www.goodreads.com/book/show/59345272-the-creative-act">The Creative Act: A Way of Being</a>
-                    </div>
-                    <div class="gr_custom_author_1722031039">
-                      by <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/author/show/28929.Rick_Rubin">Rick Rubin</a>
-                    </div>
-                    <div class="gr_custom_rating_1722031039">
-                      <img alt="really liked it" src="https://www.goodreads.com/images/layout/stars/red_star_4_of_5.png"/>
-                    </div>
-                    <div class="gr_custom_description_1722031039">
-                      Sachin Koti rated a book really liked it
-                      <br/>
-                      <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/show/6365571073?utm_medium=api&amp;utm_source=custom_widget">Read my review of The Creative Act: A Way of Being</a>
-                    </div>
-                  </div>
-                  <div class="gr_custom_each_item_1722031039">
-                    <div class="gr_custom_image_1722031039">
-                      <a rel="nofollow" href="https://www.goodreads.com/book/show/61215359-never-finished"><img alt="Never Finished: Unshackle Your Mind and Win the War Within" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1663451691l/61215359._SX50_.jpg"/></a>
-                    </div>
-                    <div class="gr_custom_title_1722031039">
-                      <a style="text-decoration: none;" class="gr_custom_book_title_1722031039" rel="nofollow" href="https://www.goodreads.com/book/show/61215359-never-finished">Never Finished: Unshackle Your Mind and Win the War Within</a>
-                    </div>
-                    <div class="gr_custom_author_1722031039">
-                      by <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/author/show/17908580.David_Goggins">David Goggins</a>
-                    </div>
-                    <div class="gr_custom_rating_1722031039">
-                      <img alt="it was amazing" src="https://www.goodreads.com/images/layout/stars/red_star_5_of_5.png"/>
-                    </div>
-                    <div class="gr_custom_description_1722031039">
-                      Sachin Koti rated a book it was amazing
-                      <br/>
-                      <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/show/5429096850?utm_medium=api&amp;utm_source=custom_widget">Read my review of Never Finished: Unshackle Your Mind and Win the War Within</a>
-                    </div>
-                  </div>
-                  <div class="gr_custom_each_item_1722031039 gr_custom_last_item_1722031039">
-                    <div class="gr_custom_image_1722031039">
-                      <a rel="nofollow" href="https://www.goodreads.com/book/show/43848929-can-t-hurt-me"><img alt="Can't Hurt Me: Master Your Mind and Defy the Odds" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1542082036l/43848929._SX50_.jpg"/></a>
-                    </div>
-                    <div class="gr_custom_title_1722031039">
-                      <a style="text-decoration: none;" class="gr_custom_book_title_1722031039" rel="nofollow" href="https://www.goodreads.com/book/show/43848929-can-t-hurt-me">Can't Hurt Me: Master Your Mind and Defy the Odds</a>
-                    </div>
-                    <div class="gr_custom_author_1722031039">
-                      by <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/author/show/17908580.David_Goggins">David Goggins</a>
-                    </div>
-                    <div class="gr_custom_rating_1722031039">
-                      <img alt="it was amazing" src="https://www.goodreads.com/images/layout/stars/red_star_5_of_5.png"/>
-                    </div>
-                    <div class="gr_custom_description_1722031039">
-                      Sachin Koti rated a book it was amazing
-                      <br/>
-                      <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/show/5429094770?utm_medium=api&amp;utm_source=custom_widget">Read my review of Can't Hurt Me: Master Your Mind and Defy the Odds</a>
-                    </div>
-                  </div>
-                  <div style="clear: both;"></div>
-                  <div style="text-align: right; font-size: 12px; margin-top: 10px;">
-                    <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/">My Recent Updates at Goodreads</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Goodreads Grid Widget -->
-              <style>
-                #gr_grid_widget_1722031070 {
-                  font-family: georgia, serif;
-                  padding: 0px 0px !important; /* Adjusted padding for better integration */
-                  width: 100% !important; /* Ensures widget takes full width of its container */
-                  box-sizing: border-box;
-                  text-align: center; /* Center the grid content */
-                }
-                #gr_grid_widget_1722031070 * {
-                  padding: 0;
-                  margin: 0;
-                  text-indent: 0;
-                  line-height: 1.4em !important; /* Adjusted line-height */
-                }
-                #gr_grid_widget_1722031070 #gr_grid_header_1722031070 {
-                  margin-bottom: 10px; /* Space below header */
-                  text-align: center;
-                  font-size: 120% !important; /* Make header font size consistent */
-                }
-                #gr_grid_widget_1722031070 #gr_grid_header_1722031070 a {
+                .gr_custom_title_1747961904 a {
+                  color: #007bff !important;
                   text-decoration: none;
                 }
-                #gr_grid_widget_1722031070 .gr_grid_book_container {
-                  float: left;
-                  width: 90px; /* Default width, can be adjusted */
-                  height: 140px; /* Default height, can be adjusted */
-                  padding: 0px 5px !important; /* Adjusted padding */
-                  margin: 0px 5px 10px 0px !important; /* Adjusted margin */
-                  text-align: left;
-                  overflow: hidden;
-                  background: none;
-                  border: none; /* Removed border */
-                  box-sizing: content-box; /* Ensure padding/border don't add to width if re-added */
+                .gr_custom_author_1747961904 {
+                  /* customize author names here */
+                  font-family: 'Lato', Arial, sans-serif;
+                  font-size: 0.95em !important;
+                  color: #555; /* Slightly lighter than base text */
+                  margin-bottom: 10px; /* Space below author */
                 }
-                #gr_grid_widget_1722031070 .gr_grid_book_container img {
-                  width: 90px; /* Ensure image fills container width */
-                  height: 140px; /* Ensure image fills container height */
-                  object-fit: cover; /* Ensure image covers the area, might crop */
-                  border: 1px solid #_E0E0E0; /* Optional: Add a light border to images if needed */
-                  box-sizing: border-box;
+                .gr_custom_author_1747961904 a {
+                  color: #555 !important;
+                  text-decoration: none;
+                }
+                .gr_custom_author_1747961904 a:hover {
+                  color: #007bff !important;
+                  text-decoration: underline;
+                }
+                .gr_custom_description_1747961904 {
+                  /* customize description here */
+                  font-family: 'Lato', Arial, sans-serif;
+                  font-size: 0.9em;
+                  line-height: 1.5;
+                  color: #444;
+                }
+                .gr_custom_rating_1747961904 {
+                  /* customize rating stars here */
+                  margin-bottom: 5px; /* Space below stars */
+                }
+                .gr_custom_image_1747961904 {
+                  /* customize book cover image here */
+                  float: none; /* Remove float */
+                  margin-right: 15px; /* Space between image and text content */
+                  margin-bottom: 0; /* No bottom margin as it's flex-aligned */
+                  width: 80px; /* Slightly larger image */
+                  flex-shrink: 0; /* Prevent image from shrinking */
+                }
+                .gr_custom_image_1747961904 img {
+                  width: 80px;
+                  height: auto;
+                  border-radius: 4px; /* Slightly rounded corners for image */
+                }
+                .gr_custom_content_1747961904 {
+                  /* Container for title, author, rating, description */
+                  flex-grow: 1; /* Allow text content to take remaining space */
+                }
+                .gr_custom_footer_1747961904 {
+                  text-align: right;
+                  font-size: 0.85em;
+                  margin-top: 15px;
+                }
+                .gr_custom_footer_1747961904 a {
+                  color: #007bff !important;
+                  text-decoration: none;
+                }
+                .gr_custom_footer_1747961904 a:hover {
+                  text-decoration: underline;
                 }
               </style>
-              <div id="gr_grid_widget_1722031070">
-                <h2 id="gr_grid_header_1722031070">
-                  <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/review/list/109963536-sachin-koti?shelf=read&utm_medium=api&utm_source=grid_widget">Sachin Koti's Read Books</a>
-                </h2>
-                <div class="gr_grid_book_container">
-                  <a title="The Almanack of Naval Ravikant: A Guide to Wealth and Happiness" rel="nofollow" href="https://www.goodreads.com/book/show/54898389-the-almanack-of-naval-ravikant"><img alt="The Almanack of Naval Ravikant: A Guide to Wealth and Happiness" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1601375932l/54898389._SX90_.jpg"/></a>
+
+              <div id="gr_custom_widget_1747961904">
+                <div class="gr_custom_container_1747961904">
+                  <h2 class="gr_custom_header_1747961904">
+                    <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/user/show/109963536-sachin-koti?ref=custom_widget_1747961904">Sachin Koti's Recently Read Books</a>
+                  </h2>
+                  <!-- Content will be loaded by the script -->
+                  <div class="gr_custom_footer_1747961904">
+                    <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/"><img alt="Goodreads" src="https://www.goodreads.com/images/widget/widget_logo.gif"/></a>
+                  </div>
                 </div>
-                <div class="gr_grid_book_container">
-                  <a title="Zero to One: Notes on Startups, or How to Build the Future" rel="nofollow" href="https://www.goodreads.com/book/show/18050143-zero-to-one"><img alt="Zero to One: Notes on Startups, or How to Build the Future" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1414347376l/18050143._SX90_.jpg"/></a>
-                </div>
-                <div class="gr_grid_book_container">
-                  <a title="Man's Search for Meaning" rel="nofollow" href="https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning"><img alt="Man's Search for Meaning" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535419394l/4069._SX90_.jpg"/></a>
-                </div>
-                <div class="gr_grid_book_container">
-                  <a title="The Psychology of Money: Timeless lessons on wealth, greed, and happiness" rel="nofollow" href="https://www.goodreads.com/book/show/41881472-the-psychology-of-money"><img alt="The Psychology of Money: Timeless lessons on wealth, greed, and happiness" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1604390044l/41881472._SX90_.jpg"/></a>
-                </div>
-                <div class="gr_grid_book_container">
-                  <a title="Rich Dad Poor Dad" rel="nofollow" href="https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad"><img alt="Rich Dad Poor Dad" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/13 Rich Dad, Poor Dad - EDITED.jpg"/></a>
-                </div>
-                <div class="gr_grid_book_container">
-                  <a title="The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life" rel="nofollow" href="https://www.goodreads.com/book/show/28257707-the-subtle-art-of-not-giving-a-f-ck"><img alt="The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1465222330l/28257707._SX90_.jpg"/></a>
-                </div>
-                <div class="gr_grid_book_container">
-                  <a title="The Intelligent Investor" rel="nofollow" href="https://www.goodreads.com/book/show/106835.The_Intelligent_Investor"><img alt="The Intelligent Investor" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1355211762l/106835._SX90_.jpg"/></a>
-                </div>
-                <div class="gr_grid_book_container">
-                  <a title="How to Win Friends and Influence People" rel="nofollow" href="https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People"><img alt="How to Win Friends and Influence People" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442726934l/4865._SX90_.jpg"/></a>
-                </div>
-                <div class="gr_grid_book_container">
-                  <a title="Thinking, Fast and Slow" rel="nofollow" href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow"><img alt="Thinking, Fast and Slow" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1317793965l/11468377._SX90_.jpg"/></a>
-                </div>
-                <div class="gr_grid_book_container">
-                  <a title="Sapiens: A Brief History of Humankind" rel="nofollow" href="https://www.goodreads.com/book/show/23692271-sapiens"><img alt="Sapiens: A Brief History of Humankind" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1420585954l/23692271._SX90_.jpg"/></a>
-                </div>
-                <br style="clear: both"/>
-                <a class="gr_grid_branding" style="font-size: .9em; color: #382110; text-decoration: none; float: right;" rel="nofollow" href="https://www.goodreads.com/user/show/109963536-sachin-koti">Sachin Koti's favorite books »</a>
-                <noscript><br/>Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Sachin Koti, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.</noscript>
               </div>
-              <script src="https://www.goodreads.com/review/grid_widget/109963536.Sachin Koti's%20Read%20Shelf?cover_size=medium&hide_link=true&hide_title=true&num_books=20&order=d&shelf=read&sort=date_read&widget_id=1722031070" type="text/javascript" charset="utf-8"></script>
-
+              <script src="https://www.goodreads.com/review/custom_widget/109963536.Sachin Koti's%20bookshelf:%20read?cover_position=left&cover_size=medium&num_books=5&order=d&shelf=read&show_author=1&show_cover=1&show_rating=1&show_review=0&show_tags=0&show_title=1&sort=date_read&widget_id=1747961904" type="text/javascript" charset="utf-8"></script>
           </div>
-
-          <h3>Other Hobbies</h3>
           <ul>
               <li>Playing guitar</li>
               <li>Listening to podcasts on diverse topics such as tech, art, business, AI, and sustainability</li>
