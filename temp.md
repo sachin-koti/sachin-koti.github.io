@@ -79,6 +79,7 @@ When running ng test, a browser window opens automatically using **Karma**, the 
                 
 
 This window provides a quick and interactive view of test outcomes, allowing developers to inspect failures or confirm test success visually.
+
 ![image](https://github.com/user-attachments/assets/4bfcf149-d754-4799-8840-c8de6b8d27ed)
 
 ![image](https://github.com/user-attachments/assets/b1f44966-440d-490d-ac9a-05dcbf2300b7)
