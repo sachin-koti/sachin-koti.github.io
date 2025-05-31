@@ -141,10 +141,10 @@ Apache JMeter is used to simulate high load on the Node.js backend APIs to analy
 
 #### Steps to Run the Performance Test
 
-1.  Open **Apache JMeter  
+1.  Open **Apache JMeter**  
     ![image](https://github.com/user-attachments/assets/182f55fc-594d-4b03-96ce-0c0fb9bcebf7)
 
-2.  Add a **Thread Group  
+2.  Add a **Thread Group**  
     **
     *   Users: 100
     *   Ramp-up period: 10 seconds
@@ -152,7 +152,7 @@ Apache JMeter is used to simulate high load on the Node.js backend APIs to analy
     ![image](https://github.com/user-attachments/assets/0c89d1c0-bd4a-46cd-b70f-b4eeb8cf1be9)
 
 
-3.  Add a **HTTP Request Sampler  
+3.  Add a **HTTP Request Sampler**  
     **
     *   Method: GET    
     *   URL: https://scriptchainhealth.com
