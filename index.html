@@ -1,272 +1,312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sachin Koti - Portfolio</title>
-  <!-- Link to FontAwesome for icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-      <header class="profile">
-          <img src="headshot.jpeg" alt="Sachin Koti" class="avatar">
-          <h1>Sachin Koti</h1>
-          <p>Software Engineer | MSCS @ USC | Innovator in Healthcare & AI</p>
-          <div class="links">
-              <a href="https://github.com/sachin-koti" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-              <a href="https://linkedin.com/in/sachin-koti" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-              <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="checkbox">
-                  DARK MODE
-                  <input type="checkbox" id="checkbox" />
-                  <div class="slider round"></div>
-                </label>
-              </div>
-          </div>
-      </header>
-      
-      <section>
-          <h2>About Me</h2>
-          <p>
-              I am a passionate and seasoned software engineer with over five years of diverse experience in software development, data science, and web technologies. I have built and deployed HIPAA-compliant, high-performance applications in healthcare, optimized cloud solutions at scale, and continuously pushed the boundaries in machine learning and AI-driven projects. My journey—from major global firms like Accenture to innovative startups such as ScriptChain Health—has honed my technical expertise, entrepreneurial spirit, and a strong commitment to leveraging technology for real-world impact.
-          </p>
-      </section>
-
-      <section>
-          <h2>Skills</h2>
-          <div class="skills">
-              <div>
-                  <h3><i class="fas fa-code"></i>Programming Languages</h3>
-                  <ul>
-                      <li>C, Python, Java, JavaScript, TypeScript, SQL</li>
-                  </ul>
-              </div>
-              <div>
-                  <h3><i class="fas fa-laptop-code"></i>Web & Frameworks</h3>
-                  <ul>
-                      <li>Angular, React, HTML, CSS, Bootstrap</li>
-                      <li>Django, Flask, Node.js, Express.js</li>
-                  </ul>
-              </div>
-              <div>
-                  <h3><i class="fas fa-cloud"></i>Cloud, DevOps & Tools</h3>
-                  <ul>
-                      <li>AWS (EC2, RDS, SageMaker, CodeDeploy), Google Cloud</li>
-                      <li>Docker, Git, CI/CD, AWS CodePipeline, Linux</li>
-                      <li>Big Data: Hadoop, Hive, Spark, Kafka</li>
-                      <li>ML & NLP: TensorFlow, PyTorch, scikit-learn, Hugging Face</li>
-                  </ul>
-              </div>
-          </div>
-      </section>
-
-      <section>
-          <h2>Education</h2>
-          <p>
-              <strong>University of Southern California</strong> - Master of Science in Computer Science (January 2023 - December 2024)<br>
-              <em>CGPA: 3.68/4</em><br>
-              Relevant Coursework: Database Systems, Analysis of Algorithms, Machine Learning for Data Science, Applied NLP, Information Retrieval, Web Technologies, Security Systems.
-          </p>
-          <p>
-              <strong>KLE Technological University</strong> - Bachelor of Engineering in Computer Science (2014 - May 2018)<br>
-              <em>CGPA: 8.83/10</em><br>
-              Relevant Coursework: Object Oriented Programming, Data Structures & Algorithms, RDBMS, Operating Systems, Computer Networks, IoT.
-          </p>
-      </section>
-
-      <section id="experience">
-          <h2>Experience</h2>
-          <div class="experience-card">
-              <h4><i class="fas fa-briefcase"></i> Software Engineer at <strong>ScriptChain Health</strong></h4>
-              <p class="experience-date">(May 2024 - Present, San Francisco, CA)</p>
-              <ul>
-                  <li>Engineered a fully responsive, HIPAA-compliant single-page application integrating data from multiple EHR systems (Epic, Cerner, Allscripts, Athena) to enhance healthcare provider efficiency.</li>
-                  <li>Migrated legacy DSTU2 APIs to R4 and developed 16 custom FHIR-based APIs, incorporating deep learning models for personalized patient readmission risk assessments.</li>
-                  <li>Optimized codebase by removing 6000 lines of redundant code and eliminating unused resources, achieving cost savings of over $10,000.</li>
-                  <li>Enhanced application performance by reducing loading time by nearly 500ms and boosting accessibility scores from 75 to 90.</li>
-                  <li>Designed and implemented a real-time messaging feature using WebSockets and improved security by addressing 80+ vulnerabilities (XSS, SQL Injection, SSRF).</li>
-                  <li>Built and maintained an ML pipeline with AWS services (CodePipeline, CodeDeploy, SageMaker) to automate model updates and data changes.</li>
-              </ul>
-          </div>
-          <div class="experience-card">
-              <h4><i class="fas fa-briefcase"></i> Associate Software Engineer at <strong>Accenture</strong></h4>
-              <p class="experience-date">(July 2018 - February 2020, Bengaluru, India)</p>
-              <ul>
-                  <li>Delivered rapid resolution to over 840 incidents on the Applied Intelligence Platform, including managing high-priority cases with a 35% expedited resolution rate.</li>
-                  <li>Implemented a cloud-based solution that saved approximately 600 hours annually by streamlining internal processes and optimizing resource utilization.</li>
-                  <li>Managed and maintained large-scale systems, including Hadoop clusters, AD servers, and 5000+ Linux servers, ensuring optimal performance and minimal downtime.</li>
-                  <li>Supported the creation and scaling of AI solutions through effective integration of pre-built software assets and advanced analytics tools.</li>
-              </ul>
-          </div>
-          <div class="experience-card">
-              <h4><i class="fas fa-user-cog"></i> Freelance & Career Transition Projects</h4>
-              <p class="experience-date">(Feb 2020 - Dec 2022, Bangalore)</p>
-              <ul>
-                  <li>Focused on self-directed learning in Data Science, Neural Networks, and Computer Vision through various personal projects such as Employee Retention Analysis, Salary Prediction, and House Price Prediction.</li>
-                  <li>Developed and marketed an innovative IoT solution – Smart Dustbin – demonstrating technical creativity and entrepreneurial drive.</li>
-                  <li>Earned a Linux Federation scholarship for LFCS training and actively participated in open source events.</li>
-              </ul>
-          </div>
-      </section>
-      
-      <section id="projects">
-          <h2>Projects</h2>
-          <div class="project-list">
-              <div class="project-card">
-                  <h4><i class="fas fa-brain"></i> LLM with RAG and Vector Database</h4>
-                  <p class="project-date">(Aug 2024 - Sep 2024)</p>
-                  <p>Developed a custom retrieval-augmented generation system by leveraging Weaviate for efficient similarity searches on a 1000-page knowledge base. Implemented RAG using a locally hosted Small Language Model (Llama2-7B) to enhance information retrieval.</p>
-              </div>
-              <div class="project-card">
-                  <h4><i class="fas fa-laptop-code"></i> Real-time Stock Search Web App</h4>
-                  <p class="project-date">(Mar 2024 - Apr 2024)</p>
-                  <p>Built a responsive Angular/Node.js application integrating Finnhub, Polygon, and Highcharts APIs, with multi-threaded concurrency to deliver fast and reliable stock data searches.</p>
-                  <a href="https://hw3frontend-262127.wl.r.appspot.com/" target="_blank" class="project-link">View Project</a>
-              </div>
-              <div class="project-card">
-                  <h4><i class="fas fa-trophy"></i> Creative Control AI Hackathon</h4>
-                  <p class="project-date">(Feb 2025)</p>
-                  <p>Awarded First Place in the Creative Actor Control track at the FBRC.ai x LumaLabs.AI Hackathon with team <em>𝗯𝗹𝗱𝗿𝘀</em>. Developed a generative AI pipeline using tools such as ComfyUI, Luma AI Lab's Photon & Ray2 APIs, ElevenLabs VoiceOver Studio, and LoRA models to help directors achieve nuanced, emotional performances from digital actors.</p>
-                  <a href="https://lu.ma/tdzqtje1?tk=1ZkTIn" target="_blank" class="project-link">More Info</a>
-              </div>
-          </div>
-      </section>
-
-      <section id="hobbies">
-          <h2>Hobbies</h2>
-          <div class="goodreads-custom-widget-wrapper">
-              <h3>My Bookshelf</h3>
-              <style type="text/css" media="screen">
-                .gr_custom_container_1747961904 {
-                  /* customize your Goodreads widget container here*/
-                  border: 1px solid #E0E0E0; /* Light grey border, consistent with general card styling */
-                  border-radius: 8px; /* Rounded corners like other cards */
-                  padding: 20px;
-                  background-color: #fdfdfd; /* Light background, similar to project/experience cards */
-                  color: #444; /* Base text color from portfolio */
-                  font-family: 'Lato', Arial, sans-serif; /* Match portfolio body font */
-                  box-shadow: 0 2px 5px rgba(0,0,0,0.07); /* Consistent shadow */
-                  width: 100%; /* Make it responsive within its container */
-                  box-sizing: border-box;
-                }
-                .gr_custom_header_1747961904 {
-                  /* customize your Goodreads header here*/
-                  font-family: 'Montserrat', Arial, sans-serif; /* Match portfolio heading font */
-                  color: #007bff; /* Accent color from portfolio */
-                  border-bottom: 2px solid #007bff;
-                  margin-bottom: 15px;
-                  padding-bottom: 10px;
-                  text-align: center;
-                  font-size: 1.3em !important; /* Slightly smaller than section h2, similar to card titles */
-                }
-                .gr_custom_each_item_1747961904 {
-                  /* customize each item here*/
-                  margin-bottom: 15px;
-                  padding-bottom: 15px;
-                  border-bottom: 1px solid #eeeeee;
-                  display: flex; /* Use flexbox for layout */
-                  align-items: flex-start; /* Align items to the top */
-                  width: 100%;
-                  box-sizing: border-box;
-                }
-                .gr_custom_each_item_1747961904:last-of-type {
-                  border-bottom: none; /* No border for the last item */
-                  margin-bottom: 0;
-                  padding-bottom: 0;
-                }
-                .gr_custom_title_1747961904 {
-                  /* customize book titles here */
-                  font-family: 'Montserrat', Arial, sans-serif; /* Match portfolio heading font */
-                  font-size: 1.1em !important;
-                  color: #007bff !important; /* Accent color for titles */
-                  text-decoration: none;
-                  font-weight: bold;
-                  margin-bottom: 5px; /* Space below title */
-                }
-                .gr_custom_title_1747961904 a {
-                  color: #007bff !important;
-                  text-decoration: none;
-                }
-                .gr_custom_author_1747961904 {
-                  /* customize author names here */
-                  font-family: 'Lato', Arial, sans-serif;
-                  font-size: 0.95em !important;
-                  color: #555; /* Slightly lighter than base text */
-                  margin-bottom: 10px; /* Space below author */
-                }
-                .gr_custom_author_1747961904 a {
-                  color: #555 !important;
-                  text-decoration: none;
-                }
-                .gr_custom_author_1747961904 a:hover {
-                  color: #007bff !important;
-                  text-decoration: underline;
-                }
-                .gr_custom_description_1747961904 {
-                  /* customize description here */
-                  font-family: 'Lato', Arial, sans-serif;
-                  font-size: 0.9em;
-                  line-height: 1.5;
-                  color: #444;
-                }
-                .gr_custom_rating_1747961904 {
-                  /* customize rating stars here */
-                  margin-bottom: 5px; /* Space below stars */
-                }
-                .gr_custom_image_1747961904 {
-                  /* customize book cover image here */
-                  float: none; /* Remove float */
-                  margin-right: 15px; /* Space between image and text content */
-                  margin-bottom: 0; /* No bottom margin as it's flex-aligned */
-                  width: 80px; /* Slightly larger image */
-                  flex-shrink: 0; /* Prevent image from shrinking */
-                }
-                .gr_custom_image_1747961904 img {
-                  width: 80px;
-                  height: auto;
-                  border-radius: 4px; /* Slightly rounded corners for image */
-                }
-                .gr_custom_content_1747961904 {
-                  /* Container for title, author, rating, description */
-                  flex-grow: 1; /* Allow text content to take remaining space */
-                }
-                .gr_custom_footer_1747961904 {
-                  text-align: right;
-                  font-size: 0.85em;
-                  margin-top: 15px;
-                }
-                .gr_custom_footer_1747961904 a {
-                  color: #007bff !important;
-                  text-decoration: none;
-                }
-                .gr_custom_footer_1747961904 a:hover {
-                  text-decoration: underline;
-                }
-              </style>
-
-              <div id="gr_custom_widget_1747961904">
-                <div class="gr_custom_container_1747961904">
-                  <h2 class="gr_custom_header_1747961904">
-                    <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/user/show/109963536-sachin-koti?ref=custom_widget_1747961904">Sachin Koti's Recently Read Books</a>
-                  </h2>
-                  <!-- Content will be loaded by the script -->
-                  <div class="gr_custom_footer_1747961904">
-                    <a style="text-decoration: none;" rel="nofollow" href="https://www.goodreads.com/"><img alt="Goodreads" src="https://www.goodreads.com/images/widget/widget_logo.gif"/></a>
-                  </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sachin Koti - Portfolio</title>
+        <!-- Link to FontAwesome for icons -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header class="profile">
+                <img src="headshot.jpeg" alt="Sachin Koti" class="avatar" />
+                <h1>Sachin Koti</h1>
+                <p>
+                    Software Engineer | MSCS @ USC | Innovator in Healthcare &
+                    AI
+                </p>
+                <div class="links">
+                    <a href="https://github.com/sachin-koti" target="_blank"
+                        ><i class="fab fa-github"></i> GitHub</a
+                    >
+                    <a
+                        href="https://linkedin.com/in/sachin-koti"
+                        target="_blank"
+                        ><i class="fab fa-linkedin"></i> LinkedIn</a
+                    >
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            DARK MODE
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
                 </div>
-              </div>
-              <script src="https://www.goodreads.com/review/custom_widget/109963536.Sachin Koti's%20bookshelf:%20read?cover_position=left&cover_size=medium&num_books=5&order=d&shelf=read&show_author=1&show_cover=1&show_rating=1&show_review=0&show_tags=0&show_title=1&sort=date_read&widget_id=1747961904" type="text/javascript" charset="utf-8"></script>
-          </div>
-          <ul>
-              <li>Playing guitar</li>
-              <li>Listening to podcasts on diverse topics such as tech, art, business, AI, and sustainability</li>
-              <li>Watching Shark Tank and reading newsletters</li>
-              <li>Playing cricket</li>
-          </ul>
-      </section>
-  </div>
-  <script src="script.js"></script>
-</body>
+            </header>
+
+            <section>
+                <h2>About Me</h2>
+                <p>
+                    I am a passionate and seasoned software engineer with over
+                    five years of diverse experience in software development,
+                    data science, and web technologies. I have built and
+                    deployed HIPAA-compliant, high-performance applications in
+                    healthcare, optimized cloud solutions at scale, and
+                    continuously pushed the boundaries in machine learning and
+                    AI-driven projects. My journey—from major global firms like
+                    Accenture to innovative startups such as ScriptChain
+                    Health—has honed my technical expertise, entrepreneurial
+                    spirit, and a strong commitment to leveraging technology for
+                    real-world impact.
+                </p>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <div class="skills">
+                    <div>
+                        <h3>
+                            <i class="fas fa-code"></i>Programming Languages
+                        </h3>
+                        <ul>
+                            <li>
+                                C, Python, Java, JavaScript, TypeScript, SQL
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>
+                            <i class="fas fa-laptop-code"></i>Web & Frameworks
+                        </h3>
+                        <ul>
+                            <li>Angular, React, HTML, CSS, Bootstrap</li>
+                            <li>Django, Flask, Node.js, Express.js</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>
+                            <i class="fas fa-cloud"></i>Cloud, DevOps & Tools
+                        </h3>
+                        <ul>
+                            <li>
+                                AWS (EC2, RDS, SageMaker, CodeDeploy), Google
+                                Cloud
+                            </li>
+                            <li>Docker, Git, CI/CD, AWS CodePipeline, Linux</li>
+                            <li>Big Data: Hadoop, Hive, Spark, Kafka</li>
+                            <li>
+                                ML & NLP: TensorFlow, PyTorch, scikit-learn,
+                                Hugging Face
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <p>
+                    <strong>University of Southern California</strong> - Master
+                    of Science in Computer Science (January 2023 - December
+                    2024)<br />
+                    <em>CGPA: 3.68/4</em><br />
+                    Relevant Coursework: Database Systems, Analysis of
+                    Algorithms, Machine Learning for Data Science, Applied NLP,
+                    Information Retrieval, Web Technologies, Security Systems.
+                </p>
+                <p>
+                    <strong>KLE Technological University</strong> - Bachelor of
+                    Engineering in Computer Science (2014 - May 2018)<br />
+                    <em>CGPA: 8.83/10</em><br />
+                    Relevant Coursework: Object Oriented Programming, Data
+                    Structures & Algorithms, RDBMS, Operating Systems, Computer
+                    Networks, IoT.
+                </p>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="experience-card">
+                    <h4>
+                        <i class="fas fa-briefcase"></i> Software Engineer at
+                        <strong>ScriptChain Health</strong>
+                    </h4>
+                    <p class="experience-date">
+                        (May 2024 - Present, San Francisco, CA)
+                    </p>
+                    <ul>
+                        <li>
+                            Engineered a fully responsive, HIPAA-compliant
+                            single-page application integrating data from
+                            multiple EHR systems (Epic, Cerner, Allscripts,
+                            Athena) to enhance healthcare provider efficiency.
+                        </li>
+                        <li>
+                            Migrated legacy DSTU2 APIs to R4 and developed 16
+                            custom FHIR-based APIs, incorporating deep learning
+                            models for personalized patient readmission risk
+                            assessments.
+                        </li>
+                        <li>
+                            Optimized codebase by removing 6000 lines of
+                            redundant code and eliminating unused resources,
+                            achieving cost savings of over $10,000.
+                        </li>
+                        <li>
+                            Enhanced application performance by reducing loading
+                            time by nearly 500ms and boosting accessibility
+                            scores from 75 to 90.
+                        </li>
+                        <li>
+                            Designed and implemented a real-time messaging
+                            feature using WebSockets and improved security by
+                            addressing 80+ vulnerabilities (XSS, SQL Injection,
+                            SSRF).
+                        </li>
+                        <li>
+                            Built and maintained an ML pipeline with AWS
+                            services (CodePipeline, CodeDeploy, SageMaker) to
+                            automate model updates and data changes.
+                        </li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h4>
+                        <i class="fas fa-briefcase"></i> Associate Software
+                        Engineer at <strong>Accenture</strong>
+                    </h4>
+                    <p class="experience-date">
+                        (July 2018 - February 2020, Bengaluru, India)
+                    </p>
+                    <ul>
+                        <li>
+                            Delivered rapid resolution to over 840 incidents on
+                            the Applied Intelligence Platform, including
+                            managing high-priority cases with a 35% expedited
+                            resolution rate.
+                        </li>
+                        <li>
+                            Implemented a cloud-based solution that saved
+                            approximately 600 hours annually by streamlining
+                            internal processes and optimizing resource
+                            utilization.
+                        </li>
+                        <li>
+                            Managed and maintained large-scale systems,
+                            including Hadoop clusters, AD servers, and 5000+
+                            Linux servers, ensuring optimal performance and
+                            minimal downtime.
+                        </li>
+                        <li>
+                            Supported the creation and scaling of AI solutions
+                            through effective integration of pre-built software
+                            assets and advanced analytics tools.
+                        </li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h4>
+                        <i class="fas fa-user-cog"></i> Freelance & Career
+                        Transition Projects
+                    </h4>
+                    <p class="experience-date">
+                        (Feb 2020 - Dec 2022, Bangalore)
+                    </p>
+                    <ul>
+                        <li>
+                            Focused on self-directed learning in Data Science,
+                            Neural Networks, and Computer Vision through various
+                            personal projects such as Employee Retention
+                            Analysis, Salary Prediction, and House Price
+                            Prediction.
+                        </li>
+                        <li>
+                            Developed and marketed an innovative IoT solution –
+                            Smart Dustbin – demonstrating technical creativity
+                            and entrepreneurial drive.
+                        </li>
+                        <li>
+                            Earned a Linux Federation scholarship for LFCS
+                            training and actively participated in open source
+                            events.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-list">
+                    <div class="project-card">
+                        <h4>
+                            <i class="fas fa-brain"></i> LLM with RAG and Vector
+                            Database
+                        </h4>
+                        <p class="project-date">(Aug 2024 - Sep 2024)</p>
+                        <p>
+                            Developed a custom retrieval-augmented generation
+                            system by leveraging Weaviate for efficient
+                            similarity searches on a 1000-page knowledge base.
+                            Implemented RAG using a locally hosted Small
+                            Language Model (Llama2-7B) to enhance information
+                            retrieval.
+                        </p>
+                    </div>
+                    <div class="project-card">
+                        <h4>
+                            <i class="fas fa-laptop-code"></i> Real-time Stock
+                            Search Web App
+                        </h4>
+                        <p class="project-date">(Mar 2024 - Apr 2024)</p>
+                        <p>
+                            Built a responsive Angular/Node.js application
+                            integrating Finnhub, Polygon, and Highcharts APIs,
+                            with multi-threaded concurrency to deliver fast and
+                            reliable stock data searches.
+                        </p>
+                        <a
+                            href="https://hw3frontend-262127.wl.r.appspot.com/"
+                            target="_blank"
+                            class="project-link"
+                            >View Project</a
+                        >
+                    </div>
+                    <div class="project-card">
+                        <h4>
+                            <i class="fas fa-trophy"></i> Creative Control AI
+                            Hackathon
+                        </h4>
+                        <p class="project-date">(Feb 2025)</p>
+                        <p>
+                            Awarded First Place in the Creative Actor Control
+                            track at the FBRC.ai x LumaLabs.AI Hackathon with
+                            team <em>𝗯𝗹𝗱𝗿𝘀</em>. Developed a generative AI
+                            pipeline using tools such as ComfyUI, Luma AI Lab's
+                            Photon & Ray2 APIs, ElevenLabs VoiceOver Studio, and
+                            LoRA models to help directors achieve nuanced,
+                            emotional performances from digital actors.
+                        </p>
+                        <a
+                            href="https://lu.ma/tdzqtje1?tk=1ZkTIn"
+                            target="_blank"
+                            class="project-link"
+                            >More Info</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <section id="hobbies">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Playing guitar</li>
+                    <li>
+                        Listening to podcasts on diverse topics such as tech,
+                        art, business, AI, and sustainability
+                    </li>
+                    <li>Watching Shark Tank and reading newsletters</li>
+                    <li>Playing cricket</li>
+                    <li>
+                        <span style="color: #382110">my read shelf:</span><br/><a href="https://www.goodreads.com/review/list/80816381?shelf=read" title="Sachin Koti's book recommendations, liked quotes, book clubs, book lists (read shelf)" rel="nofollow"><img border="0" alt="Sachin Koti's book recommendations, liked quotes, book clubs, book lists (read shelf)" src="https://s.gr-assets.com/images/badge/badge1.jpg"></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
